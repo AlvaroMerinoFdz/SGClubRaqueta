@@ -1,0 +1,10 @@
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\bin\Debug\SgRaquetaAlvaroMerino.exe.config
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\bin\Debug\SgRaquetaAlvaroMerino.exe
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\bin\Debug\SgRaquetaAlvaroMerino.pdb
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.frmPrincipal.resources
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.Properties.Resources.resources
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.exe
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.pdb
