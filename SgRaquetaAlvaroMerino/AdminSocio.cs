@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SgRaquetaAlvaroMerino
 {
-    public partial class frmPrincipal : Form
+    public partial class AdminSocio : Form
     {
-        public frmPrincipal()
+        public AdminSocio()
         {
             InitializeComponent();
-        }
-
-        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

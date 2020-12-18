@@ -8,3 +8,4 @@ C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\De
 C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.exe
 C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.pdb
+C:\Users\Usuario\source\repos\SgRaquetaAlvaroMerino\SgRaquetaAlvaroMerino\obj\Debug\SgRaquetaAlvaroMerino.frmInformes.resources
