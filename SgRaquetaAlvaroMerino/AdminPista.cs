@@ -16,5 +16,20 @@ namespace SgRaquetaAlvaroMerino
         {
             InitializeComponent();
         }
+
+        private void pistasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pistasBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBD);
+
+        }
+
+        private void AdminPista_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dsBD.pistas' Puede moverla o quitarla según sea necesario.
+            this.pistasTableAdapter.Fill(this.dsBD.pistas);
+
+        }
     }
 }
