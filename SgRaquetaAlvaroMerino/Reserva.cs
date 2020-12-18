@@ -43,6 +43,8 @@ namespace SgRaquetaAlvaroMerino
 
         private void Reserva_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dsBD.reservas' Puede moverla o quitarla según sea necesario.
+            this.reservasTableAdapter.Fill(this.dsBD.reservas);
             // TODO: esta línea de código carga datos en la tabla 'dsBD.socios' Puede moverla o quitarla según sea necesario.
             this.sociosTableAdapter.Fill(this.dsBD.socios);
 

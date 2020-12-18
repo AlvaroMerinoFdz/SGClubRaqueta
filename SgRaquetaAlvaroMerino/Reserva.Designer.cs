@@ -36,6 +36,9 @@ namespace SgRaquetaAlvaroMerino
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label cuentaCorrienteLabel;
             System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label pistaLabel;
+            System.Windows.Forms.Label fechaLabel;
+            System.Windows.Forms.Label horaLabel;
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,17 +57,34 @@ namespace SgRaquetaAlvaroMerino
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.reservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reservasTableAdapter = new SgRaquetaAlvaroMerino.dsBDTableAdapters.reservasTableAdapter();
+            this.pistaTextBox = new System.Windows.Forms.TextBox();
+            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.nudHora = new System.Windows.Forms.NumericUpDown();
+            this.nudMinutos = new System.Windows.Forms.NumericUpDown();
+            this.pcbFotoPista = new System.Windows.Forms.PictureBox();
+            this.btnReservar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
             domicilioLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
             cuentaCorrienteLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
+            pistaLabel = new System.Windows.Forms.Label();
+            fechaLabel = new System.Windows.Forms.Label();
+            horaLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sociosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoPista)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,6 +111,16 @@ namespace SgRaquetaAlvaroMerino
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnReservar);
+            this.panel2.Controls.Add(this.pcbFotoPista);
+            this.panel2.Controls.Add(this.nudMinutos);
+            this.panel2.Controls.Add(horaLabel);
+            this.panel2.Controls.Add(this.nudHora);
+            this.panel2.Controls.Add(fechaLabel);
+            this.panel2.Controls.Add(this.fechaDateTimePicker);
+            this.panel2.Controls.Add(pistaLabel);
+            this.panel2.Controls.Add(this.pistaTextBox);
             this.panel2.Location = new System.Drawing.Point(31, 227);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(737, 156);
@@ -168,7 +198,7 @@ namespace SgRaquetaAlvaroMerino
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.pistasTableAdapter = null;
-            this.tableAdapterManager.reservasTableAdapter = null;
+            this.tableAdapterManager.reservasTableAdapter = this.reservasTableAdapter;
             this.tableAdapterManager.sociosTableAdapter = this.sociosTableAdapter;
             this.tableAdapterManager.UpdateOrder = SgRaquetaAlvaroMerino.dsBDTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -280,6 +310,130 @@ namespace SgRaquetaAlvaroMerino
             this.maskedTextBox2.Size = new System.Drawing.Size(277, 21);
             this.maskedTextBox2.TabIndex = 13;
             // 
+            // reservasBindingSource
+            // 
+            this.reservasBindingSource.DataMember = "reservas";
+            this.reservasBindingSource.DataSource = this.dsBD;
+            // 
+            // reservasTableAdapter
+            // 
+            this.reservasTableAdapter.ClearBeforeFill = true;
+            // 
+            // pistaLabel
+            // 
+            pistaLabel.AutoSize = true;
+            pistaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            pistaLabel.Location = new System.Drawing.Point(25, 17);
+            pistaLabel.Name = "pistaLabel";
+            pistaLabel.Size = new System.Drawing.Size(43, 15);
+            pistaLabel.TabIndex = 0;
+            pistaLabel.Text = "Pista:";
+            // 
+            // pistaTextBox
+            // 
+            this.pistaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "pista", true));
+            this.pistaTextBox.Location = new System.Drawing.Point(75, 18);
+            this.pistaTextBox.Name = "pistaTextBox";
+            this.pistaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.pistaTextBox.TabIndex = 1;
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaLabel.Location = new System.Drawing.Point(26, 61);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(50, 15);
+            fechaLabel.TabIndex = 2;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // fechaDateTimePicker
+            // 
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservasBindingSource, "fecha", true));
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(81, 61);
+            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaDateTimePicker.TabIndex = 3;
+            // 
+            // horaLabel
+            // 
+            horaLabel.AutoSize = true;
+            horaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            horaLabel.Location = new System.Drawing.Point(23, 117);
+            horaLabel.Name = "horaLabel";
+            horaLabel.Size = new System.Drawing.Size(42, 15);
+            horaLabel.TabIndex = 4;
+            horaLabel.Text = "Hora:";
+            // 
+            // nudHora
+            // 
+            this.nudHora.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservasBindingSource, "hora", true));
+            this.nudHora.Location = new System.Drawing.Point(78, 112);
+            this.nudHora.Maximum = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            this.nudHora.Minimum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.nudHora.Name = "nudHora";
+            this.nudHora.Size = new System.Drawing.Size(48, 20);
+            this.nudHora.TabIndex = 5;
+            this.nudHora.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            // 
+            // nudMinutos
+            // 
+            this.nudMinutos.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.reservasBindingSource, "hora", true));
+            this.nudMinutos.Increment = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.nudMinutos.Location = new System.Drawing.Point(142, 112);
+            this.nudMinutos.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.nudMinutos.Name = "nudMinutos";
+            this.nudMinutos.Size = new System.Drawing.Size(48, 20);
+            this.nudMinutos.TabIndex = 6;
+            // 
+            // pcbFotoPista
+            // 
+            this.pcbFotoPista.Location = new System.Drawing.Point(340, 10);
+            this.pcbFotoPista.Name = "pcbFotoPista";
+            this.pcbFotoPista.Size = new System.Drawing.Size(361, 102);
+            this.pcbFotoPista.TabIndex = 7;
+            this.pcbFotoPista.TabStop = false;
+            // 
+            // btnReservar
+            // 
+            this.btnReservar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservar.Location = new System.Drawing.Point(217, 118);
+            this.btnReservar.Name = "btnReservar";
+            this.btnReservar.Size = new System.Drawing.Size(234, 23);
+            this.btnReservar.TabIndex = 2;
+            this.btnReservar.Text = "RESERVAR";
+            this.btnReservar.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(498, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Duración: 1h 30 minutos.";
+            // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,10 +450,16 @@ namespace SgRaquetaAlvaroMerino
             this.Load += new System.EventHandler(this.Reserva_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sociosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMinutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFotoPista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +485,14 @@ namespace SgRaquetaAlvaroMerino
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private dsBDTableAdapters.reservasTableAdapter reservasTableAdapter;
+        private System.Windows.Forms.BindingSource reservasBindingSource;
+        private System.Windows.Forms.NumericUpDown nudMinutos;
+        private System.Windows.Forms.NumericUpDown nudHora;
+        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
+        private System.Windows.Forms.TextBox pistaTextBox;
+        private System.Windows.Forms.PictureBox pcbFotoPista;
+        private System.Windows.Forms.Button btnReservar;
+        private System.Windows.Forms.Label label3;
     }
 }
