@@ -67,25 +67,28 @@ namespace SgRaquetaAlvaroMerino
             // sOCIOSToolStripMenuItem
             // 
             this.sOCIOSToolStripMenuItem.Name = "sOCIOSToolStripMenuItem";
-            this.sOCIOSToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.sOCIOSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sOCIOSToolStripMenuItem.Text = "SOCIOS";
+            this.sOCIOSToolStripMenuItem.Click += new System.EventHandler(this.sOCIOSToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(112, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // pISTASToolStripMenuItem
             // 
             this.pISTASToolStripMenuItem.Name = "pISTASToolStripMenuItem";
-            this.pISTASToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.pISTASToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pISTASToolStripMenuItem.Text = "PISTAS";
+            this.pISTASToolStripMenuItem.Click += new System.EventHandler(this.pISTASToolStripMenuItem_Click);
             // 
             // rESERVASToolStripMenuItem
             // 
             this.rESERVASToolStripMenuItem.Name = "rESERVASToolStripMenuItem";
             this.rESERVASToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.rESERVASToolStripMenuItem.Text = "RESERVAS";
+            this.rESERVASToolStripMenuItem.Click += new System.EventHandler(this.rESERVASToolStripMenuItem_Click);
             // 
             // iNFORMESToolStripMenuItem
             // 
