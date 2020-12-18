@@ -16,5 +16,36 @@ namespace SgRaquetaAlvaroMerino
         {
             InitializeComponent();
         }
+
+        private void sociosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sociosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBD);
+
+        }
+
+        private void sociosBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sociosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBD);
+
+        }
+
+        private void sociosBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sociosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBD);
+
+        }
+
+        private void Reserva_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dsBD.socios' Puede moverla o quitarla según sea necesario.
+            this.sociosTableAdapter.Fill(this.dsBD.socios);
+
+        }
     }
 }
