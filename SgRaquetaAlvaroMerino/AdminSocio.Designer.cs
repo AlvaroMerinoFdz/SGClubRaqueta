@@ -181,6 +181,7 @@ namespace SgRaquetaAlvaroMerino
             this.btnInsertar.TabIndex = 15;
             this.btnInsertar.Text = "INSERTAR";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnModificar
             // 
@@ -191,6 +192,7 @@ namespace SgRaquetaAlvaroMerino
             this.btnModificar.TabIndex = 16;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -201,6 +203,7 @@ namespace SgRaquetaAlvaroMerino
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnMostrar
             // 
@@ -211,6 +214,7 @@ namespace SgRaquetaAlvaroMerino
             this.btnMostrar.TabIndex = 18;
             this.btnMostrar.Text = "MOSTRAR TODOS";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // dgvSocios
             // 

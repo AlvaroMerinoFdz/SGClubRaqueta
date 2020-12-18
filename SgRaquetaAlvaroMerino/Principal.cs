@@ -68,23 +68,12 @@ namespace SgRaquetaAlvaroMerino
                 }
             }
             else abrirInformes();
-            
         }
 
         private void pISTASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Comprobamos si tiene otra pestaña abierta
-            if (this.MdiChildren.Length > 0)
-            {
-                //Comprobamos si esa pestaña es el formulario que queremos abrir
-                if (this.MdiChildren[0].Name != "AdminPista")
-                {
-                    this.MdiChildren[0].Close();
-                    //el formulario padre abre el hijo
-                    abrirPistas();
-                }
-            }
-            else abrirPistas();
+            AdminPista pista = new AdminPista();
+                pista.ShowDialog();
         }
 
         private void rESERVASToolStripMenuItem_Click(object sender, EventArgs e)
